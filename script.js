@@ -1,7 +1,7 @@
 // Ensure DOM is fully loaded before running scripts
 document.addEventListener('DOMContentLoaded', function () {
     // Smooth Scrolling for Navigation Links
-    const navLinks = document.querySelectorAll('.nav a, .cta-button');
+    const navLinks = document.querySelectorAll('.nav a, .header .cta-button, .hero-content .cta-button');
     if (navLinks.length === 0) {
         console.warn('No navigation links or CTA buttons found.');
     }
@@ -9,6 +9,10 @@ document.addEventListener('DOMContentLoaded', function () {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
+            if (!targetId || targetId === '#') {
+                console.warn(`Invalid or empty href on element:`, this);
+                return;
+            }
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 window.scrollTo({
@@ -22,6 +26,8 @@ document.addEventListener('DOMContentLoaded', function () {
             const nav = document.querySelector('.nav');
             if (nav) {
                 nav.classList.remove('active');
+            } else {
+                console.warn('Navigation element not found.');
             }
         });
     });
@@ -33,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const nav = document.querySelector('.nav');
             if (nav) {
                 nav.classList.toggle('active');
+                console.log('Hamburger menu toggled');
             } else {
                 console.warn('Navigation element not found.');
             }
@@ -46,20 +53,21 @@ document.addEventListener('DOMContentLoaded', function () {
     if (contactForm) {
         contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            console.log('Form submitted'); // Debug log
+            console.log('Form submission triggered');
 
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const message = document.getElementById('message').value.trim();
+            const name = document.getElementById('name')?.value.trim();
+            const email = document.getElementById('email')?.value.trim();
+            const message = document.getElementById('message')?.value.trim();
             const popup = document.getElementById('popup');
             const popupMessage = document.getElementById('popup-message');
 
             if (!popup || !popupMessage) {
                 console.error('Popup or popup-message element not found.');
+                alert('Error: Popup element not found. Please check the HTML structure.');
                 return;
             }
 
-            if (name === '' || email === '' || message === '') {
+            if (!name || !email || !message) {
                 popupMessage.textContent = 'Please fill in all fields.';
                 popup.style.display = 'flex';
                 console.log('Showing popup: Empty fields');
@@ -80,6 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     } else {
         console.error('Contact form element not found.');
+        alert('Error: Contact form not found. Please check the HTML structure.');
     }
 
     // Close Popup
@@ -108,6 +117,8 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         console.warn('Popup element not found.');
     }
+
+
 });
 
 // Skeleton Loader Simulation

@@ -302,7 +302,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 3000; /* Increased z-index to ensure visibility */
+    z-index: 3000;
     justify-content: center;
     align-items: center;
 }
@@ -313,7 +313,7 @@ body {
     width: 90%;
     padding: 20px;
     border-radius: 10px;
-    border: 2px solid #FF6F61; /* Added border for visibility */
+    border: 2px solid #FF6F61;
     text-align: center;
     position: relative;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
