@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TiffinHub - Delicious Food Delivered</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">TiffinHub</div>
+            <nav class="nav">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="cta-button">Order Now</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Delicious Meals Delivered to Your Door</h1>
+            <p>Explore a variety of fresh, flavorful dishes crafted with love at TiffinHub.</p>
+            <a href="#menu" class="cta-button">View Menu</a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <div class="menu-grid" id="menu-grid">
+                <!-- Skeleton Loaders (Initially Visible) -->
+                <div class="menu-item skeleton">
+                    <div class="skeleton-img"></div>
+                    <div class="skeleton-text"></div>
+                    <div class="skeleton-text short"></div>
+                    <div class="skeleton-text price"></div>
+                </div>
+                <div class="menu-item skeleton">
+                    <div class="skeleton-img"></div>
+                    <div class="skeleton-text"></div>
+                    <div class="skeleton-text short"></div>
+                    <div class="skeleton-text price"></div>
+                </div>
+                <div class="menu-item skeleton">
+                    <div class="skeleton-img"></div>
+                    <div class="skeleton-text"></div>
+                    <div class="skeleton-text short"></div>
+                    <div class="skeleton-text price"></div>
+                </div>
+                <div class="menu-item skeleton">
+                    <div class="skeleton-img"></div>
+                    <div class="skeleton-text"></div>
+                    <div class="skeleton-text short"></div>
+                    <div class="skeleton-text price"></div>
+                </div>
+                <!-- Actual Menu Items (Initially Hidden) -->
+                <div class="menu-item actual-content" style="display: none;">
+                    <img src="images/butter-chicken.jpg" alt="Butter Chicken">
+                    <h3>Butter Chicken</h3>
+                    <p>Creamy tomato-based curry with tender chicken.</p>
+                    <span>₹999</span>
+                </div>
+                <div class="menu-item actual-content" style="display: none;">
+                    <img src="images/paneer-tikka.jpg" alt="Paneer Tikka">
+                    <h3>Paneer Tikka</h3>
+                    <p>Grilled paneer cubes marinated in spices.</p>
+                    <span>₹879</span>
+                </div>
+                <div class="menu-item actual-content" style="display: none;">
+                    <img src="images/sushi-platter.jpg" alt="Sushi Platter">
+                    <h3>Sushi Platter</h3>
+                    <p>Fresh assortment of sushi rolls.</p>
+                    <span>₹1279</span>
+                </div>
+                <div class="menu-item actual-content" style="display: none;">
+                    <img src="images/gulab-jamun.jpg" alt="Gulab Jamun">
+                    <h3>Gulab Jamun</h3>
+                    <p>Sweet, syrup-soaked dessert balls.</p>
+                    <span>₹479</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About TiffinHub</h2>
+            <p>At TiffinHub, we bring you the finest culinary experience with a focus on quality, freshness, and flavor. Our mission is to deliver delicious, wholesome meals right to your doorstep, crafted with passion and care.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+            <p>Email: info@tiffinhub.com | Phone: +91-98765-43210</p>
+            <!-- Popup for Form Submission -->
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                    <span id="popup-close" class="popup-close" aria-label="Close popup">&times;</span>
+                    <p id="popup-message" aria-live="polite"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 TiffinHub. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
