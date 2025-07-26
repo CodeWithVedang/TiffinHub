@@ -69,9 +69,28 @@ body {
     text-decoration: none;
     font-weight: 600;
     transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
 }
 
 .cta-button:hover {
+    background-color: #F4A261;
+}
+
+/* Order Button */
+.order-button {
+    background-color: #FF6F61;
+    color: #FFFFFF;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 600;
+    margin: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.order-button:hover {
     background-color: #F4A261;
 }
 
@@ -125,20 +144,6 @@ body {
     font-size: 20px;
     margin-bottom: 30px;
     max-width: 600px;
-}
-
-.hero-content .cta-button {
-    background-color: #FF6F61;
-    color: #FFFFFF;
-    padding: 12px 24px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s;
-}
-
-.hero-content .cta-button:hover {
-    background-color: #F4A261;
 }
 
 /* Menu Section */
@@ -320,10 +325,26 @@ body {
     animation: popupFadeIn 0.3s ease-in-out;
 }
 
+.popup-content h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.popup-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.popup-content input[readonly] {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}
+
 .popup-content p {
     font-size: 16px;
     color: #2E2E2E;
-    margin-bottom: 20px;
+    margin: 15px 0 0;
 }
 
 .popup-close {
@@ -488,5 +509,10 @@ body {
     .about h2,
     .contact h2 {
         font-size: 24px;
+    }
+
+    .order-button {
+        padding: 6px 12px;
+        font-size: 12px;
     }
 }

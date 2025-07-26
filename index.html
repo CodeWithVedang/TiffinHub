@@ -74,24 +74,42 @@
                     <h3>Butter Chicken</h3>
                     <p>Creamy tomato-based curry with tender chicken.</p>
                     <span>₹999</span>
+                    <button class="order-button" data-item="Butter Chicken" data-price="999">Order Now</button>
                 </div>
                 <div class="menu-item actual-content" style="display: none;">
                     <img src="images/paneer-tikka.jpg" alt="Paneer Tikka">
                     <h3>Paneer Tikka</h3>
                     <p>Grilled paneer cubes marinated in spices.</p>
                     <span>₹879</span>
+                    <button class="order-button" data-item="Paneer Tikka" data-price="879">Order Now</button>
                 </div>
                 <div class="menu-item actual-content" style="display: none;">
                     <img src="images/sushi-platter.jpg" alt="Sushi Platter">
                     <h3>Sushi Platter</h3>
                     <p>Fresh assortment of sushi rolls.</p>
                     <span>₹1279</span>
+                    <button class="order-button" data-item="Sushi Platter" data-price="1279">Order Now</button>
                 </div>
                 <div class="menu-item actual-content" style="display: none;">
                     <img src="images/gulab-jamun.jpg" alt="Gulab Jamun">
                     <h3>Gulab Jamun</h3>
                     <p>Sweet, syrup-soaked dessert balls.</p>
                     <span>₹479</span>
+                    <button class="order-button" data-item="Gulab Jamun" data-price="479">Order Now</button>
+                </div>
+            </div>
+            <!-- Order Popup -->
+            <div id="order-popup" class="popup">
+                <div class="popup-content">
+                    <span id="order-popup-close" class="popup-close" aria-label="Close order popup">&times;</span>
+                    <h3>Place Your Order</h3>
+                    <form id="order-form">
+                        <input type="text" id="order-item" readonly>
+                        <input type="number" id="order-quantity" placeholder="Quantity" min="1" required>
+                        <textarea id="order-address" placeholder="Delivery Address" required></textarea>
+                        <button type="submit" class="cta-button">Submit Order</button>
+                    </form>
+                    <p id="order-popup-message" aria-live="polite"></p>
                 </div>
             </div>
         </div>
@@ -116,7 +134,7 @@
                 <button type="submit" class="cta-button">Send Message</button>
             </form>
             <p>Email: info@tiffinhub.com | Phone: +91-98765-43210</p>
-            <!-- Popup for Form Submission -->
+            <!-- Contact Popup -->
             <div id="popup" class="popup">
                 <div class="popup-content">
                     <span id="popup-close" class="popup-close" aria-label="Close popup">&times;</span>
